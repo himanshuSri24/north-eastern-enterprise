@@ -100,7 +100,7 @@ const Right = () => {
 
 const Contact = () => {
   return (
-    <div className="flex flex-col gap-9.5 mx-16">
+    <div className="flex flex-col gap-9.5 pt-14 px-16 bg-grey">
       <ContactHeader />
       <Seperator />
       <div className="flex">

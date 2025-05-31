@@ -159,7 +159,7 @@ const Form = () => {
               name="query"
               value={form.query}
               onChange={handleChange}
-              className="border-1 w-full h-[93%]"
+              className="border-1 w-full h-[275px]"
             />
             {errors.query && (
               <div className="text-red-500 text-xs mt-1">{errors.query}</div>
