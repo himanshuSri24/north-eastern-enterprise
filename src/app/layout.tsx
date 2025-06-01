@@ -1,6 +1,8 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Jura } from "next/font/google";
+import Header from "./components/header/Header";
+import Contact from "./components/contact/Contact";
 
 const jura = Jura({
   subsets: ["latin"],
@@ -19,7 +21,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={jura.className}>{children}</body>
+      <body className={jura.className}>
+        <Header />
+        {children}
+        <Contact />
+      </body>
     </html>
   );
 }

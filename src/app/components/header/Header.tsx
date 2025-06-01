@@ -13,10 +13,10 @@ const Header = () => {
           </span>
         </div>
         <div className="flex items-center gap-14 text-title-1 font-bold">
-          <NavLink href="#">Home</NavLink>
-          <NavLink href="#">Vision & Mission</NavLink>
-          <NavLink href="#">Authorised Brands</NavLink>
-          <NavLink href="#">Contact Us</NavLink>
+          <NavLink href="/">Home</NavLink>
+          <NavLink href="/vision-and-mission">Vision & Mission</NavLink>
+          <NavLink href="/authorised-brands">Authorised Brands</NavLink>
+          <NavLink href="/contact">Contact Us</NavLink>
         </div>
       </div>
     </>
