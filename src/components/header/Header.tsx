@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "@/app/icons/logo.svg";
+import Logo from "@/icons/logo.svg";
 import NavLink from "../common/NavLink";
 
 const Header = () => {

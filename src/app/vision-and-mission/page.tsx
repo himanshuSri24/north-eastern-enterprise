@@ -1,7 +1,7 @@
 import React from "react";
-import Banner from "../components/banner/Banner";
-import { BannerPage } from "../components/banner/Banner";
-import WhyNEE from "../components/whyNee/WhyNEE";
+import Banner from "../../components/banner/Banner";
+import { BannerPage } from "../../components/banner/Banner";
+import WhyNEE from "../../components/whyNee/WhyNEE";
 
 const page = () => {
   return (

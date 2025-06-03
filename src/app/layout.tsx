@@ -1,8 +1,8 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Jura } from "next/font/google";
-import Header from "./components/header/Header";
-import Contact from "./components/contact/Contact";
+import Header from "../components/header/Header";
+import Contact from "../components/contact/Contact";
 
 const jura = Jura({
   subsets: ["latin"],

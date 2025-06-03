@@ -1,5 +1,5 @@
 import React from "react";
-import Company1 from "@/app/icons/company1.svg";
+import Company1 from "@/icons/company1.svg";
 
 const Logos = () => {
   return (
