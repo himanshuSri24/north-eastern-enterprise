@@ -5,6 +5,8 @@ export enum BannerPage {
   VISION_MISSION = "VISION_MISSION",
   ABOUT = "ABOUT",
   CONTACT = "CONTACT",
+  AUTHORISED_BRANDS = "AUTHORISED_BRANDS",
+  CONTACT_US = "CONTACT_US",
 }
 
 interface BannerProps {
@@ -36,6 +38,23 @@ const Banner = ({ page }: BannerProps) => {
           supply chain. Backed by deep expertise and long-standing
           relationships, we are proud to be a partner in saving lives — one
           delivery at a time.
+        </div>
+      </div>
+    );
+  } else if (page === BannerPage.AUTHORISED_BRANDS) {
+    return (
+      <div className="flex flex-col p-16 gap-10 bg-gradient-to-r from-[#010109] to-[#041E59]">
+        <div className="text-h5 text-white font-medium text-center px-64">
+          Working with best Clients and Partners.
+        </div>
+      </div>
+    );
+  } else if (page === BannerPage.CONTACT_US) {
+    return (
+      <div className="flex flex-col p-16 gap-10 bg-gradient-to-r from-[#010109] to-[#041E59]">
+        <div className="text-h5 text-white font-medium text-center px-64">
+          Whether you're looking to partner, place an order, or just have
+          questions — we're here.
         </div>
       </div>
     );

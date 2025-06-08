@@ -76,7 +76,7 @@ const Form = () => {
   return (
     <form onSubmit={handleSubmit}>
       <div className="flex gap-4">
-        <div className="w-[45%] flex flex-col justify-start items-start gap-3.5">
+        <div className="w-[250px] flex flex-col justify-start items-start gap-3.5">
           {/* Name */}
           <div>
             <div className="text-body-1 font-medium">Name</div>
@@ -148,7 +148,7 @@ const Form = () => {
             )}
           </div>
         </div>
-        <div className="w-[55%] flex flex-col justify-start h-full items-start gap-3.5">
+        <div className="w-[400px] flex flex-col justify-start h-full items-start gap-5.5">
           {/* Enter requested query */}
           <div className="h-full w-full">
             <div className="text-body-1 font-medium">
@@ -170,7 +170,7 @@ const Form = () => {
       <div className="flex justify-center">
         <button
           type="submit"
-          className="bg-secondary w-full mt-9 text-white px-4 py-2 rounded-md hover:cursor-pointer"
+          className="bg-secondary w-[670px] mt-9 text-white px-4 py-2 rounded-md hover:cursor-pointer"
         >
           <span className="text-h5 font-medium">Submit</span>
         </button>

@@ -67,32 +67,22 @@ const Left = () => {
   return (
     <div className="w-[55%] flex flex-col gap-10 text-title-1 font-bold">
       {getLocations()}
-      <ContactInfo />
-      {/* navbar in vertical manner with same effect as the one in the home page */}
-      <div className="flex flex-col gap-4 w-max text-title-1 font-bold mb-10">
-        <NavLink href="#">Home</NavLink>
-        <NavLink href="#">Vision & Mission</NavLink>
-        <NavLink href="#">Authorised Brands</NavLink>
-        <NavLink href="#">Contact Us</NavLink>
-      </div>
     </div>
   );
 };
 
 const Right = () => {
   return (
-    <div className="w-[45%] flex flex-col gap-4">
-      <div className="text-title-1 font-bold">Contact Us</div>
-      <div className="text-title-1 font-medium leading-[120%]">
-        Our customer service team will reach out to you within one business day
-        please use this form or directly contact us via email or phone.
-      </div>
-      <div className="flex flex-col mt-10">
-        <div className="text-h2 text-center font-bold">Request a Quote</div>
-        <div className="title-1 font-medium text-center mb-11">
-          Please take a moment to fill out the form.
-        </div>
-        <Form />
+    <div className="w-[45%] flex flex-col gap-10 items-end text-right pb-10">
+      {/* Contact Info */}
+      <ContactInfo />
+
+      {/* Navigation Links */}
+      <div className="flex flex-col gap-4 w-max text-title-1 font-bold">
+        <NavLink href="#">Home</NavLink>
+        <NavLink href="#">Vision & Mission</NavLink>
+        <NavLink href="#">Authorised Brands</NavLink>
+        <NavLink href="#">Contact Us</NavLink>
       </div>
     </div>
   );
