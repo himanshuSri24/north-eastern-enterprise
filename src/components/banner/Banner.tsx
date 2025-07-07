@@ -44,7 +44,7 @@ const Banner = ({ page }: BannerProps) => {
   } else if (page === BannerPage.AUTHORISED_BRANDS) {
     return (
       <div className="flex flex-col p-16 gap-10 bg-gradient-to-r from-[#010109] to-[#041E59]">
-        <div className="text-h5 text-white font-medium text-center px-64">
+        <div className="text-h1 text-white font-medium text-center px-64">
           Working with best Clients and Partners.
         </div>
       </div>
@@ -52,9 +52,9 @@ const Banner = ({ page }: BannerProps) => {
   } else if (page === BannerPage.CONTACT_US) {
     return (
       <div className="flex flex-col p-16 gap-10 bg-gradient-to-r from-[#010109] to-[#041E59]">
-        <div className="text-h5 text-white font-medium text-center px-64">
-          Whether you're looking to partner, place an order, or just have
-          questions — we're here.
+        <div className="text-h1 text-white font-medium text-center px-64">
+          Whether you&apos;re looking to partner, place an order, or just have
+          questions — we&apos;re here.
         </div>
       </div>
     );
