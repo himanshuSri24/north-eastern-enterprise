@@ -5,9 +5,9 @@ import Form from "@/components/contact/Form";
 
 const getFAQTile = (heading: string, content: string) => {
   return (
-    <div className="bg-[#F5F5F5] rounded-[16px] p-6">
-      <div>
-        <div className="text-[#151515]">{heading}</div>
+    <div className="bg-[#F5F5F5] rounded-[16px] p-6 flex flex-col gap-6">
+      <div className="flex justify-between font-bold">
+        <div className="text-[#151515] max-w-[80%]">{heading}</div>
         <div>x</div>
       </div>
       <div className="text-[#747474]">{content}</div>
@@ -26,7 +26,7 @@ const Page = () => {
               Frequently asked questions
             </div>
             {getFAQTile(
-              "Do you offer same-day or next-day delivery?",
+              "Do you offer same-day or next-day delivery?Do you offer same-day or next-day delivery?Do you offer same-day or next-day delivery?",
               "Yes, same-day or next-day delivery is available for select locations, based on stock availability."
             )}
           </div>
