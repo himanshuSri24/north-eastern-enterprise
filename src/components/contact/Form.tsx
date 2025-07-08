@@ -36,6 +36,11 @@ const Form = () => {
     query: "",
   });
   const [errors, setErrors] = useState<FormErrors>({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<
+    "idle" | "success" | "error"
+  >("idle");
+  const [submitMessage, setSubmitMessage] = useState("");
 
   const handleChange = (
     e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
@@ -62,15 +67,54 @@ const Form = () => {
     return newErrors;
   };
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const validationErrors = validate();
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
       return;
     }
-    console.log(form);
-    // Optionally reset form here
+
+    setIsSubmitting(true);
+    setSubmitStatus("idle");
+    setSubmitMessage("");
+
+    try {
+      const response = await fetch("/api/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(form),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setSubmitStatus("success");
+        setSubmitMessage("Thank you! Your message has been sent successfully.");
+        // Reset form after successful submission
+        setForm({
+          name: "",
+          emailPhone: "",
+          organization: "",
+          subject: "General Inquiry",
+          query: "",
+        });
+      } else {
+        setSubmitStatus("error");
+        setSubmitMessage(
+          data.error || "Failed to send message. Please try again."
+        );
+      }
+    } catch {
+      setSubmitStatus("error");
+      setSubmitMessage(
+        "Network error. Please check your connection and try again."
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -167,12 +211,34 @@ const Form = () => {
           </div>
         </div>
       </div>
+      {/* Status Messages */}
+      {submitStatus !== "idle" && (
+        <div className="flex justify-center mt-4">
+          <div
+            className={`text-sm px-4 py-2 rounded-md ${
+              submitStatus === "success"
+                ? "bg-green-100 text-green-800"
+                : "bg-red-100 text-red-800"
+            }`}
+          >
+            {submitMessage}
+          </div>
+        </div>
+      )}
+
       <div className="flex justify-center">
         <button
           type="submit"
-          className="bg-secondary w-[670px] mt-9 text-white px-4 py-2 rounded-md hover:cursor-pointer"
+          disabled={isSubmitting}
+          className={`w-[670px] mt-9 text-white px-4 py-2 rounded-md transition-colors ${
+            isSubmitting
+              ? "bg-gray-400 cursor-not-allowed"
+              : "bg-secondary hover:cursor-pointer hover:bg-secondary/90"
+          }`}
         >
-          <span className="text-h5 font-medium">Submit</span>
+          <span className="text-h5 font-medium">
+            {isSubmitting ? "Sending..." : "Submit"}
+          </span>
         </button>
       </div>
     </form>
