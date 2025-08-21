@@ -16,3 +16,7 @@
   --text-body-1: 14px;
   --text-body-2: 12px;
 }
+
+body {
+  background: white;
+}
