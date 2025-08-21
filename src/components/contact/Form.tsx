@@ -129,7 +129,7 @@ const Form = () => {
               name="name"
               value={form.name}
               onChange={handleChange}
-              className="border-1 w-[234px] h-[42px]"
+              className="border-1 w-[234px] h-[42px] px-2"
             />
           </div>
           {/* Email / Phone */}
@@ -143,7 +143,7 @@ const Form = () => {
               name="emailPhone"
               value={form.emailPhone}
               onChange={handleChange}
-              className="border-1 w-[234px] h-[42px]"
+              className="border-1 w-[234px] h-[42px] px-2"
             />
             {errors.emailPhone && (
               <div className="text-red-500 text-xs mt-1">
@@ -162,7 +162,7 @@ const Form = () => {
               name="organization"
               value={form.organization}
               onChange={handleChange}
-              className="border-1 w-[234px] h-[42px]"
+              className="border-1 w-[234px] h-[42px] px-2"
             />
             {errors.organization && (
               <div className="text-red-500 text-xs mt-1">
@@ -180,7 +180,7 @@ const Form = () => {
               name="subject"
               value={form.subject}
               onChange={handleChange}
-              className="border-1 w-[234px] h-[42px]"
+              className="border-1 w-[234px] h-[42px] px-2"
             >
               <option value="General Inquiry">General Inquiry</option>
               <option value="Request a Quote">Request a Quote</option>
@@ -203,7 +203,7 @@ const Form = () => {
               name="query"
               value={form.query}
               onChange={handleChange}
-              className="border-1 w-full h-[275px]"
+              className="border-1 w-full h-[275px] px-2"
             />
             {errors.query && (
               <div className="text-red-500 text-xs mt-1">{errors.query}</div>
@@ -233,7 +233,13 @@ const Form = () => {
           className={`w-[670px] mt-9 text-white px-4 py-2 rounded-md transition-colors ${
             isSubmitting
               ? "bg-gray-400 cursor-not-allowed"
-              : "bg-secondary hover:cursor-pointer hover:bg-secondary/90"
+              : [
+                  form.emailPhone.length,
+                  form.organization.length,
+                  form.query.length,
+                ].includes(0)
+              ? "bg-secondary hover:cursor-not-allowed "
+              : "bg-[#161670] hover:cursor-pointer hover:bg-[#161670]/90"
           }`}
         >
           <span className="text-h5 font-medium">
