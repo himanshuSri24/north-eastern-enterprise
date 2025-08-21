@@ -25,7 +25,10 @@ const cardData = [
 
 const renderCard = (card: (typeof cardData)[number]) => {
   return (
-    <div className="flex flex-col gap-11 bg-[#CFDDE9] text-black text-start py-18 px-15">
+    <div
+      key={card.title}
+      className="flex flex-col gap-11 bg-[#CFDDE9] text-black text-start py-18 px-15"
+    >
       <div className="text-h2 font-bold leading-[120%]">{card.title}</div>
       <div className="text-h4 font-bold leading-[120%]">{card.description}</div>
     </div>
