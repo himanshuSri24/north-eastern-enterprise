@@ -217,10 +217,11 @@ export const Logosforab = () => {
             />
           </div>
         ))}
-      </div>
-
-      <div className="flex justify-end items-center sm:pr-10 text-h5 font-bold desk-2:text-[42px]">
-        etc...
+        <div></div>
+        <div></div>
+        <div className="flex justify-center items-center  text-h5 font-bold desk-2:text-[42px]">
+          etc...
+        </div>
       </div>
     </div>
   );
