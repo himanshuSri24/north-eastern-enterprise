@@ -202,7 +202,7 @@ export const Logosforab = () => {
 
   return (
     <div className="w-full my-20 px-[10%]">
-      <div className="grid grid-cols-5 gap-4 w-full">
+      <div className="relative grid grid-cols-5 gap-4 w-full">
         {images.map((src, index) => (
           <div
             key={index}
@@ -217,6 +217,11 @@ export const Logosforab = () => {
             />
           </div>
         ))}
+        <div></div>
+        <div></div>
+        <div className="flex justify-center items-center  text-h5 font-bold desk-2:text-[42px]">
+          etc...
+        </div>
       </div>
     </div>
   );
