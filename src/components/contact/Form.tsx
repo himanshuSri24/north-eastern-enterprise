@@ -118,23 +118,28 @@ const Form = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div className="flex gap-4">
-        <div className="w-[250px] flex flex-col justify-start items-start gap-3.5">
+    <form
+      onSubmit={handleSubmit}
+      className="w-[100%] desk-2:w-auto px-4 desk-2:px-0"
+    >
+      <div className="flex gap-4 ">
+        <div className="w-2/5 desk-2:w-[250px] flex flex-col justify-start items-start gap-3.5 desk-2:mt-0 mt-1.5">
           {/* Name */}
-          <div>
-            <div className="text-body-1 font-medium">Name</div>
+          <div className="w-full desk-2:w-auto">
+            <div className="text-[10px] desk-2:text-body-1 font-medium">
+              Name
+            </div>
             <input
               type="text"
               name="name"
               value={form.name}
               onChange={handleChange}
-              className="border-1 w-[234px] h-[42px] px-2"
+              className="border-1 w-full desk-2:w-[234px] h-[42px] px-2"
             />
           </div>
           {/* Email / Phone */}
-          <div>
-            <div className="text-body-1 font-medium">
+          <div className="w-full desk-2:w-auto">
+            <div className="text-[10px] desk-2:text-body-1 font-medium">
               Email / Phone
               <span className="text-body-1 font-medium text-red-500"> *</span>
             </div>
@@ -143,7 +148,7 @@ const Form = () => {
               name="emailPhone"
               value={form.emailPhone}
               onChange={handleChange}
-              className="border-1 w-[234px] h-[42px] px-2"
+              className="border-1 w-full desk-2:w-[234px] h-[42px] px-2"
             />
             {errors.emailPhone && (
               <div className="text-red-500 text-xs mt-1">
@@ -152,8 +157,8 @@ const Form = () => {
             )}
           </div>
           {/* Organization */}
-          <div>
-            <div className="text-body-1 font-medium">
+          <div className="w-full desk-2:w-auto">
+            <div className="text-[10px] desk-2:text-body-1 font-medium">
               Organization
               <span className="text-body-1 font-medium text-red-500"> *</span>
             </div>
@@ -162,7 +167,7 @@ const Form = () => {
               name="organization"
               value={form.organization}
               onChange={handleChange}
-              className="border-1 w-[234px] h-[42px] px-2"
+              className="border-1 w-full desk-2:w-[234px] h-[42px] px-2"
             />
             {errors.organization && (
               <div className="text-red-500 text-xs mt-1">
@@ -171,8 +176,8 @@ const Form = () => {
             )}
           </div>
           {/* Subject */}
-          <div>
-            <div className="text-body-1 font-medium">
+          <div className="w-full desk-2:w-auto">
+            <div className="text-[10px] desk-2:text-body-1 font-medium">
               Subject
               <span className="text-body-1 font-medium text-red-500"> *</span>
             </div>
@@ -180,7 +185,7 @@ const Form = () => {
               name="subject"
               value={form.subject}
               onChange={handleChange}
-              className="border-1 w-[234px] h-[42px] px-2"
+              className="border-1 w-full desk-2:w-[234px] h-[42px] px-2 text-[10px] desk-2:text-body-1"
             >
               <option value="General Inquiry">General Inquiry</option>
               <option value="Request a Quote">Request a Quote</option>
@@ -192,10 +197,10 @@ const Form = () => {
             )}
           </div>
         </div>
-        <div className="w-[400px] flex flex-col justify-start h-full items-start gap-5.5">
+        <div className="w-3/5 desk-2:w-[400px] flex flex-col justify-start h-full items-start gap-5.5">
           {/* Enter requested query */}
           <div className="h-full w-full">
-            <div className="text-body-1 font-medium">
+            <div className="text-[10px] desk-2:text-body-1 font-medium">
               Enter requested query
               <span className="text-body-1 font-medium text-red-500"> *</span>
             </div>

@@ -18,6 +18,7 @@
 
   --breakpoint-mob: 450px;
   --breakpoint-desk-1: 1300px;
+  --breakpoint-desk-2: 1500px;
 }
 
 body {
