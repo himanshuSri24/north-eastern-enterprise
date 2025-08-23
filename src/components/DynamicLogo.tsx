@@ -14,10 +14,11 @@ const DynamicLogo = ({
   useEffect(() => {
     // Only runs in browser, so window is defined
     const handleResize = () => {
+      console.log("window width", window.innerWidth);
       setWindowWidth(window.innerWidth);
     };
     // Set initial width
-    setWindowWidth(window.innerWidth);
+    handleResize();
 
     // Listen for window resize
     window.addEventListener("resize", handleResize);
@@ -27,7 +28,6 @@ const DynamicLogo = ({
   }, []);
 
   const { width, height } = getLogoDimensions(windowWidth);
-
   return (
     <div
       style={{

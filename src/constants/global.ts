@@ -6,7 +6,7 @@ export const getLogoDimensions = (
   windowWidth: number = 1025,
   smallerVariant?: boolean
 ) => {
-  if (windowWidth <= 440) {
+  if (windowWidth <= 600) {
     return smallerVariant
       ? { width: 165, height: 16.5 }
       : { width: 200, height: 20 };
