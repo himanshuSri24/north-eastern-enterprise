@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 
@@ -31,18 +33,20 @@ const Logos = () => {
       <div className="relative w-full h-16 flex items-center justify-center">
         <Image
           src="/home/r14.png"
-          alt="Partner Logo"
+          alt="Partner Logo r14"
           fill
           className="object-contain"
+          unoptimized
         />
       </div>
 
       <div className="relative w-full h-16 flex items-center justify-center">
         <Image
           src="/home/r21.png"
-          alt="Partner Logo"
+          alt="Partner Logo r21"
           fill
           className="object-contain"
+          unoptimized
         />
       </div>
       <div className="relative w-full h-16 flex items-center justify-center">

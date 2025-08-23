@@ -33,9 +33,9 @@ export const getLocationsDimensions = (windowWidth: number = 1025) => {
   if (windowWidth <= 440) {
     return { width: 77, height: 43 };
   } else if (windowWidth < 768) {
-    return { width: 221, height: 124 };
+    return { width: 77 * 1.25, height: 43 * 1.25 };
   } else if (windowWidth < 1024) {
-    return { width: 221, height: 124 };
+    return { width: 77 * 1.75, height: 43 * 1.75 };
   } else if (windowWidth < 1500) {
     return { width: 221, height: 124 };
   } else {
