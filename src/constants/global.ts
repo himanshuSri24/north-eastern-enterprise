@@ -9,7 +9,7 @@ export const getLogoDimensions = (
   if (windowWidth <= 440) {
     return smallerVariant
       ? { width: 165, height: 16.5 }
-      : { width: 270, height: 27 };
+      : { width: 200, height: 20 };
   } else if (windowWidth < 768) {
     return smallerVariant
       ? { width: 175, height: 17.5 }
