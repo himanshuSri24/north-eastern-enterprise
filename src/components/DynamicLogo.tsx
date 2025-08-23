@@ -35,9 +35,8 @@ const DynamicLogo = ({
         height: `${smallerVariant ? height * 0.5 : height}px`,
         // transform: `scale(${smallerVariant ? 0.5 : 1})`,
       }}
-      className={`flex items-center ${
-        smallerVariant ? "justify-start" : "justify-center"
-      } overflow-visible`}
+      className={`flex items-center 
+        justify-start overflow-visible`}
     >
       <Logo className="origin-center" />
     </div>
