@@ -64,7 +64,7 @@ const Right = () => {
 
 const Contact = () => {
   return (
-    <div className="flex flex-col gap-3 sm:gap-9.5 pt-5 md:pt-14 px-4 mob:px-8 sm:px-16 bg-grey">
+    <div className="flex flex-col gap-3 sm:gap-9.5 pt-5 md:pt-14 px-4 mob:px-8 sm:px-16 bg-grey mt-6 mob:mt-0">
       <ContactHeader />
       <Seperator />
       <div className="flex">

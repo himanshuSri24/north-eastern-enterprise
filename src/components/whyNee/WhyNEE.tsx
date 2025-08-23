@@ -27,10 +27,14 @@ const renderCard = (card: (typeof cardData)[number]) => {
   return (
     <div
       key={card.title}
-      className="flex flex-col gap-11 bg-[#CFDDE9] text-black text-start py-18 px-15"
+      className="flex flex-col gap-3 sm:gap-11 bg-[#CFDDE9] text-black text-start sm:py-18 py-4 px-4 sm:px-15"
     >
-      <div className="text-h2 font-bold leading-[120%]">{card.title}</div>
-      <div className="text-h4 font-bold leading-[120%]">{card.description}</div>
+      <div className="text-[9px] sm:text-h2 font-bold leading-[120%]">
+        {card.title}
+      </div>
+      <div className="text-[9px] sm:text-h4 font-bold leading-[120%]">
+        {card.description}
+      </div>
     </div>
   );
 };
@@ -38,13 +42,13 @@ const renderCard = (card: (typeof cardData)[number]) => {
 const WhyNEE = () => {
   return (
     <>
-      <div className="flex flex-col gap-5 bg-grey my-6 mx-16 rounded-[20px] py-14 px-5 text-center">
-        <div className="text-h1 font-bold text-primary">
+      <div className="flex flex-col gap-5 bg-grey my-6 mx-4 sm:mx-16 rounded-[20px] sm:py-14 py-4 px-4 sm:px-5 text-center">
+        <div className="text-h4 sm:text-h1 font-bold text-primary">
           Why North Eastern Enterprise?
         </div>
       </div>
       <div
-        className="text-h1 font-bold text-primary grid grid-cols-2 pt-20 pb-40 gap-y-11 gap-x-21 px-17"
+        className="text-h1 font-bold text-primary grid grid-cols-2 pt-5 sm:pt-20 pb-10 sm:pb-40 gap-y-3 sm:gap-y-11 gap-x-5 sm:gap-x-21 px-3 sm:px-17"
         style={{
           backgroundImage: "url('/pharmaBackground.svg')",
           backgroundSize: "cover",

@@ -213,6 +213,7 @@ export const Logosforab = () => {
               alt={`Partner Logo ${index + 1}`}
               fill
               className="object-contain"
+              unoptimized={src.includes("r14") || src.includes("r21")}
             />
           </div>
         ))}
