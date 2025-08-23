@@ -45,44 +45,24 @@ const FAQs = () => {
       </div>
       <div className="flex flex-col gap-4">
         <FAQTile
-          heading="Do you offer same-day or next-day delivery?"
-          content="Yes, same-day or next-day delivery is available for select locations, based on stock availability."
-        />
-        <FAQTile
           heading="What areas do you currently distribute to?"
-          content="Yes, same-day or next-day delivery is available for select locations, based on stock availability."
-        />
-        <FAQTile
-          heading="Where are your offices or warehouses located?"
-          content="Yes, same-day or next-day delivery is available for select locations, based on stock availability."
+          content="All over the West Bengal and North Eastern States."
         />
         <FAQTile
           heading="How long does it take to receive a response after I contact you?"
-          content="Yes, same-day or next-day delivery is available for select locations, based on stock availability."
+          content="Within 2 Business days."
         />
         <FAQTile
           heading="Who can I speak to for business partnership inquiries?"
-          content="Yes, same-day or next-day delivery is available for select locations, based on stock availability."
-        />
-        <FAQTile
-          heading="What forms of payment do you accept?"
-          content="Yes, same-day or next-day delivery is available for select locations, based on stock availability."
-        />
-        <FAQTile
-          heading="Can I request a product catalog?"
-          content="Yes, same-day or next-day delivery is available for select locations, based on stock availability."
-        />
-        <FAQTile
-          heading="Are you an authorised distributor?"
-          content="Yes, same-day or next-day delivery is available for select locations, based on stock availability."
+          content="Please directly contact with the proprietor Mr. Asit Kumar Aich (9832021150) and our Business Head Miss Payasti Aich (9434059201) or can directly email us at northee.slg@gmal.com"
         />
         <FAQTile
           heading="Do you deal in temperature-sensitive or cold-chain products?"
-          content="Yes, same-day or next-day delivery is available for select locations, based on stock availability."
+          content="Yes we deal in temperature-sensitive or cold-chain products."
         />
         <FAQTile
           heading="Are all your products certified and compliant?"
-          content="Yes, same-day or next-day delivery is available for select locations, based on stock availability."
+          content="Yes."
         />
       </div>
     </div>
