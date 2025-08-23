@@ -16,11 +16,11 @@ interface BannerProps {
 const Banner = ({ page }: BannerProps) => {
   if (page === BannerPage.HOME) {
     return (
-      <div className="flex flex-col p-16 gap-10 bg-gradient-to-r from-[#010109] to-[#041E59] pb-23">
-        <div className="text-h1 text-white font-bold leading-[120%]">
+      <div className="flex flex-col p-6 text-center mob:text-start mob:p-16 gap-10 bg-gradient-to-r from-[#010109] to-[#041E59] mob:pb-23">
+        <div className="text-title-1 mob:text-h3 sm:text-h2 md:text-h1 text-white font-bold leading-[120%]">
           Trusted Surgical Goods Distributer <br /> in North-East India
         </div>
-        <div className="text-h5 text-white font-medium">
+        <div className="text-body-1 sm:text-title-1 md:text-h5 text-white font-medium">
           Serving hospitals, clinics and government bodies since 1995
         </div>
       </div>
@@ -28,7 +28,7 @@ const Banner = ({ page }: BannerProps) => {
   } else if (page === BannerPage.VISION_MISSION) {
     return (
       <div className="flex flex-col p-16 gap-10 bg-gradient-to-r from-[#010109] to-[#041E59] pb-23">
-        <div className="text-h5 text-white font-medium text-center px-64">
+        <div className="text-body-1 sm:text-title-1 md:text-h5 text-white font-medium text-center px-64">
           North Eastern Enterprise is a trusted surgical distribution firm based
           in Northeast India, serving hospitals, clinics, and public health
           institutions for over 25 years. With precision in distribution and
@@ -44,7 +44,7 @@ const Banner = ({ page }: BannerProps) => {
   } else if (page === BannerPage.AUTHORISED_BRANDS) {
     return (
       <div className="flex flex-col p-16 gap-10 bg-gradient-to-r from-[#010109] to-[#041E59]">
-        <div className="text-h1 text-white font-medium text-center px-64">
+        <div className="text-title-1 mob:text-h3 sm:text-h2  text-white font-medium text-center px-64">
           Working with best Clients and Partners.
         </div>
       </div>
@@ -52,7 +52,7 @@ const Banner = ({ page }: BannerProps) => {
   } else if (page === BannerPage.CONTACT_US) {
     return (
       <div className="flex flex-col p-16 gap-10 bg-gradient-to-r from-[#010109] to-[#041E59]">
-        <div className="text-h1 text-white font-medium text-center px-64">
+        <div className="text-title-1 mob:text-h3 sm:text-h2  text-white font-medium text-center px-64">
           Whether you&apos;re looking to partner, place an order, or just have
           questions — we&apos;re here.
         </div>

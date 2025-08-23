@@ -1,48 +1,18 @@
 import React from "react";
-import Logo from "@/icons/logo.svg";
 import NavLink from "../common/NavLink";
+import DynamicLogo from "../DynamicLogo";
+import DynamicLocations from "../DynamicLocations";
 
 const ContactHeader = () => {
   return (
-    <div className="flex items-center gap-4 mb-9.5">
-      <Logo width={46} height={39} />
-      <div className="text-h4 font-bold text-primary">
-        NORTH EASTERN ENTERPRISE
-      </div>
+    <div className="flex justify-start gap-4 mob:mb-9.5">
+      <DynamicLogo smallerVariant={true} />
     </div>
   );
 };
 
 const Seperator = () => {
   return <div className="h-[1px] bg-primary"></div>;
-};
-
-const getLocations = () => {
-  const locations = ["SILIGURI", "KOLKATA"];
-  return locations.map((location) => (
-    <div key={location} className="flex items-center gap-6">
-      <iframe
-        src={
-          location === "SILIGURI"
-            ? "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3563.9447597894086!2d88.42317507592173!3d26.714211676765967!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e441d2d1a35275%3A0x57500ea0830d0e37!2sNORTH%20EASTERN%20ENTERPRISE!5e0!3m2!1sen!2sin!4v1748718975324!5m2!1sen!2sin"
-            : "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3563.9447597894086!2d88.42317507592173!3d26.714211676765967!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e441d2d1a35275%3A0x57500ea0830d0e37!2sNORTH%20EASTERN%20ENTERPRISE!5e0!3m2!1sen!2sin!4v1748718975324!5m2!1sen!2sin"
-        }
-        width="221"
-        height="124"
-        style={{ border: 0 }}
-        allowFullScreen={false}
-        loading="lazy"
-        referrerPolicy="no-referrer-when-downgrade"
-      ></iframe>
-      <div>
-        {location === "SILIGURI" ? "Khudirampally, Siliguri" : "Kolkata, Garia"}
-        <br />
-        {location === "SILIGURI"
-          ? "West Bengal - 734001"
-          : "West Bengal - 562301"}
-      </div>
-    </div>
-  ));
 };
 
 const ContactInfo = () => {
@@ -64,8 +34,11 @@ const ContactInfo = () => {
 
 const Left = () => {
   return (
-    <div className="w-[55%] flex flex-col gap-10 text-title-1 font-bold">
-      {getLocations()}
+    <div className="w-[55%] overflow-hidden flex flex-col gap-10 text-title-1 font-bold">
+      <DynamicLocations />
+      <div className="flex-col gap-2 text-body-2 flex mob:hidden pb-4">
+        <ContactInfo />
+      </div>
     </div>
   );
 };
@@ -74,14 +47,16 @@ const Right = () => {
   return (
     <div className="w-[45%] flex flex-col gap-10 items-end text-right pb-10">
       {/* Contact Info */}
-      <ContactInfo />
+      <div className="flex-col gap-2 hidden mob:flex">
+        <ContactInfo />
+      </div>
 
       {/* Navigation Links */}
-      <div className="flex flex-col gap-4 w-max text-title-1 font-bold">
-        <NavLink href="#">Home</NavLink>
-        <NavLink href="#">Vision & Mission</NavLink>
-        <NavLink href="#">Authorised Brands</NavLink>
-        <NavLink href="#">Contact Us</NavLink>
+      <div className="flex flex-col gap-3 mob:gap-4 w-max text-body-2 mob:text-title-1 font-bold">
+        <NavLink href="/">Home</NavLink>
+        <NavLink href="/vision-and-mission">Vision & Mission</NavLink>
+        <NavLink href="/authorised-brands">Authorised Brands</NavLink>
+        <NavLink href="/contact-us">Contact Us</NavLink>
       </div>
     </div>
   );
@@ -89,7 +64,7 @@ const Right = () => {
 
 const Contact = () => {
   return (
-    <div className="flex flex-col gap-9.5 pt-14 px-16 bg-grey">
+    <div className="flex flex-col gap-3 sm:gap-9.5 pt-5 md:pt-14 px-4 mob:px-8 sm:px-16 bg-grey">
       <ContactHeader />
       <Seperator />
       <div className="flex">

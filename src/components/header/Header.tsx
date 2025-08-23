@@ -1,7 +1,7 @@
 "use client";
-import React, { useState } from "react";
-import Logo from "@/icons/logo.svg";
+import React, { useState, useEffect } from "react";
 import NavLink from "../common/NavLink";
+import DynamicLogo from "../DynamicLogo";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -14,16 +14,27 @@ const Header = () => {
     setIsMobileMenuOpen(false);
   };
 
+  // Prevent body scroll when menu is open
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+
+    // Cleanup
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [isMobileMenuOpen]);
+
   return (
     <>
-      <div className="flex justify-between items-center px-4 lg:px-16 pt-10 mt-10 pb-10 mb-30 sticky top-0 z-50 bg-white">
+      <div className="flex justify-between items-center px-4 lg:px-16 pt-10 mt-10 pb-10 mb-10 mob:mb-30 sticky top-0 z-30 bg-white">
         {/* Mobile Layout */}
-        <div className="lg:hidden flex justify-between items-center w-full">
+        <div className="desk-1:hidden flex justify-between items-center w-full">
           <div className="flex items-center gap-3 flex-1 justify-center">
-            <Logo width={50} height={40} />
-            <span className="text-lg font-bold text-primary">
-              NORTH EASTERN ENTERPRISE
-            </span>
+            <DynamicLogo />
           </div>
           <button
             onClick={toggleMobileMenu}
@@ -31,20 +42,17 @@ const Header = () => {
             aria-label="Toggle menu"
           >
             <div className="space-y-1">
-              <div className="w-6 h-0.5 bg-primary"></div>
-              <div className="w-6 h-0.5 bg-primary"></div>
-              <div className="w-6 h-0.5 bg-primary"></div>
+              <div className="w-6 h-0.5 bg-black"></div>
+              <div className="w-6 h-0.5 bg-black"></div>
+              <div className="w-6 h-0.5 bg-black"></div>
             </div>
           </button>
         </div>
 
         {/* Desktop Layout */}
-        <div className="hidden lg:flex justify-between items-center w-full">
+        <div className="hidden desk-1:flex justify-between items-center w-full">
           <div className="flex items-center gap-6">
-            <Logo width={70} height={60} />
-            <span className="text-h2 font-bold text-primary">
-              NORTH EASTERN ENTERPRISE
-            </span>
+            <DynamicLogo />
           </div>
           <div className="flex items-center gap-14 text-title-1 font-bold">
             <NavLink href="/">Home</NavLink>
@@ -60,28 +68,28 @@ const Header = () => {
         <>
           {/* Overlay */}
           <div
-            className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden"
+            className="fixed inset-0  bg-opacity-20 z-40 lg:hidden"
+            style={{ backdropFilter: "blur(4px)" }}
             onClick={closeMobileMenu}
           ></div>
 
           {/* Sidebar */}
-          <div className="fixed top-0 right-0 h-full w-80 bg-white shadow-lg z-50 lg:hidden transform transition-transform duration-300 ease-in-out">
+          <div className="fixed top-0 right-0 h-full w-full max-w-80 bg-white shadow-lg z-50 lg:hidden transform transition-transform duration-300 ease-in-out overflow-y-auto">
             <div className="p-6">
-              <div className="flex justify-between items-center mb-8">
-                <h2 className="text-xl font-bold text-primary">Menu</h2>
+              <div className="flex justify-start items-center mb-8">
                 <button
                   onClick={closeMobileMenu}
                   className="p-2 rounded-md hover:bg-gray-100 transition-colors"
                   aria-label="Close menu"
                 >
                   <div className="w-6 h-6 relative">
-                    <div className="absolute top-3 w-6 h-0.5 bg-primary transform rotate-45"></div>
-                    <div className="absolute top-3 w-6 h-0.5 bg-primary transform -rotate-45"></div>
+                    <div className="absolute top-3 w-6 h-0.5 bg-black transform rotate-45"></div>
+                    <div className="absolute top-3 w-6 h-0.5 bg-black transform -rotate-45"></div>
                   </div>
                 </button>
               </div>
 
-              <nav className="space-y-6">
+              <nav className="space-y-6 flex flex-col gap-y-6 text-center py-20">
                 <div
                   className="text-title-1 font-bold"
                   onClick={closeMobileMenu}

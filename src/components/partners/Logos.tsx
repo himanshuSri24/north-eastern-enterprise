@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Logos = () => {
   return (
-    <div className="grid grid-cols-4 gap-4 w-1/2">
+    <div className="grid grid-cols-4 gap-4 w-full sm:w-1/2 px-10 sm:px-0">
       <div className="relative w-full h-16 flex items-center justify-center">
         <Image
           src="/home/r11.png"

@@ -15,6 +15,9 @@
   --text-title-1: 17px;
   --text-body-1: 14px;
   --text-body-2: 12px;
+
+  --breakpoint-mob: 450px;
+  --breakpoint-desk-1: 1300px;
 }
 
 body {
