@@ -43,9 +43,9 @@ export async function POST(request: NextRequest) {
     const messageData = {
       from: `North Eastern Enterprise <${
         process.env.MAILGUN_FROM_EMAIL ||
-        `noreply@${process.env.MAILGUN_DOMAIN}`
+        `no-reply@${process.env.MAILGUN_DOMAIN}`
       }>`,
-      to: "himanshu20032002@gmail.com",
+      to: "northee.slg@gmail.com",
       subject: `Contact Form: ${subject}`,
       html: `
         <h2>New Contact Form Submission</h2>
