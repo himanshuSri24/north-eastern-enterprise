@@ -33,7 +33,12 @@ const Header = () => {
       <div className="flex justify-between items-center px-4 lg:px-16 pt-10 mt-10 pb-10 mb-10 mob:mb-30 sticky top-0 z-30 bg-white">
         {/* Mobile Layout */}
         <div className="desk-1:hidden flex justify-between items-center w-full">
-          <div className="flex items-center gap-3 flex-1 justify-start ">
+          <div
+            className="flex items-center gap-3 flex-1 justify-start cursor-pointer"
+            onClick={() => {
+              window.location.href = "/";
+            }}
+          >
             <DynamicLogo />
           </div>
           <button
@@ -51,7 +56,12 @@ const Header = () => {
 
         {/* Desktop Layout */}
         <div className="hidden desk-1:flex justify-between items-center w-full">
-          <div className="flex items-center gap-6">
+          <div
+            className="flex items-center gap-6 cursor-pointer"
+            onClick={() => {
+              window.location.href = "/";
+            }}
+          >
             <DynamicLogo />
           </div>
           <div className="flex items-center gap-14 text-title-1 font-bold">
