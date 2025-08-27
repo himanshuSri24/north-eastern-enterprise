@@ -2,7 +2,7 @@
 
 import React from "react";
 import Banner from "../../components/banner/Banner";
-import { BannerPage } from "../../components/banner/Banner";
+import { BannerType } from "../../components/banner/Banner";
 import Form from "@/components/contact/Form";
 import { useState } from "react";
 
@@ -108,7 +108,7 @@ const ContactUsFormContainer = () => {
 const Page = () => {
   return (
     <div className="font-jura">
-      <Banner page={BannerPage.CONTACT_US} />
+      <Banner bannerType={BannerType.CONTACT_US} />
       <div className="flex w-full">
         <div className="w-full hidden desk-2:flex">
           <div className="w-1/2">

@@ -78,13 +78,13 @@ const Header = () => {
         <>
           {/* Overlay */}
           <div
-            className="fixed inset-0  bg-opacity-20 z-40 lg:hidden"
+            className="fixed inset-0  bg-opacity-20 z-40 desk-1:hidden"
             style={{ backdropFilter: "blur(4px)" }}
             onClick={closeMobileMenu}
           ></div>
 
           {/* Sidebar */}
-          <div className="fixed top-0 right-0 h-full w-full max-w-80 bg-white shadow-lg z-50 lg:hidden transform transition-transform duration-300 ease-in-out overflow-y-auto">
+          <div className="fixed top-0 right-0 h-full w-full max-w-80 bg-white shadow-lg z-50 desk-1:hidden transform transition-transform duration-300 ease-in-out overflow-y-auto">
             <div className="p-6">
               <div className="flex justify-start items-center mb-8">
                 <button
