@@ -23,7 +23,6 @@ const DynamicLocations = () => {
   }, []);
 
   const { width, height } = getLocationsDimensions(windowWidth);
-  console.log("dynamicLocations: ", width, height, windowWidth);
 
   const locations = ["SILIGURI", "KOLKATA"];
   return locations.map((location) => (

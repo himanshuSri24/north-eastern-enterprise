@@ -34,7 +34,7 @@ const Header = () => {
         {/* Mobile Layout */}
         <div className="desk-1:hidden flex justify-between items-center w-full">
           <div
-            className="flex items-center gap-3 flex-1 justify-start cursor-pointer"
+            className="flex items-center gap-3 flex-1 justify-start cursor-pointer logo-container"
             onClick={() => {
               window.location.href = "/";
             }}
@@ -57,7 +57,7 @@ const Header = () => {
         {/* Desktop Layout */}
         <div className="hidden desk-1:flex justify-between items-center w-full">
           <div
-            className="flex items-center gap-6 cursor-pointer"
+            className="flex items-center gap-6 cursor-pointer logo-container"
             onClick={() => {
               window.location.href = "/";
             }}

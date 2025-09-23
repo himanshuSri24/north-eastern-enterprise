@@ -24,3 +24,29 @@
 body {
   background: white;
 }
+
+/* iOS-specific fixes for SVG rendering and logo visibility */
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Ensure proper rendering on iOS Safari */
+@supports (-webkit-touch-callout: none) {
+  /* iOS Safari specific styles */
+  .logo-container {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+  /* Force hardware acceleration for better SVG rendering */
+  svg {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+}
